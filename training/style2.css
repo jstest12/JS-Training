@@ -1,0 +1,108 @@
+.container {
+	font-family: Helvetica;
+}
+
+.item {
+	width: 620px;
+	height: 100px;
+	background: #F5DEB3; 
+/*	border: 1px solid black; */
+	background: linear-gradient(top, #DBDDC7, #BFC3A2);
+	background: -webkit-linear-gradient(top, #FFF8DC, #F5DEB3);
+	background: -moz-linear-gradient(top, #FFF8DC, #F5DEB3);
+	border-bottom:1px solid white;
+	cursor: pointer;
+}
+
+.item:hover {
+	background: #87CEEB;
+	background: -webkit-linear-gradient(top, #AFEEEE, #87CEEB);
+	background: -moz-linear-gradient(top, #AFEEEE, #87CEEB);
+}
+
+
+.currValue {
+	display:block;
+	float:right;
+	margin-top: 15px;
+}
+
+.currValueText {
+	border: none;
+	background: none;
+	font-size: 30px;
+	text-align:right;
+	width: 200px;
+	margin-right: 10px;
+}
+
+.currValueText:focus {
+	border: 1px solid #0000CD;
+	background: #fff;
+}
+
+.left {
+	width: 25%;
+	height: 100%;
+/*	background: #CBA; */
+	float:left;
+}
+
+.right {
+	height: 100%;
+	width: 10%;
+/*	background: #BBB; */
+	float: right;
+}
+
+.center {
+	height: 100%;
+/*	background: #AAA; */
+	margin-left: 25%;
+	margin-right: 10%;
+}
+
+.center-top {
+	height: 70%;
+/*	background: #FF00FF; */
+}
+
+.center-bottom {
+	height: 30%;
+/*	background: #ADFF2F; */
+}
+
+.star {
+	height: 100%;
+	width: 50%;
+/*	background: #8A2BE2; */
+	float: left;
+}
+
+.flag {
+	width: 50%;
+	height: 70%;
+/*	background: url(icons/gif/us.gif) no-repeat scroll 50% 50%;  */
+	float:left;
+}
+
+.flag-name {
+	width: 50%;
+	height: 30%;
+/*	background: #00CED1; */
+	float:left;
+}
+
+.flag-nameText {
+	display: block;
+	margin-left: 30%;
+	margin-top: 5px;
+}
+
+
+.currName {
+	display:block;
+	float:right;
+	margin-top: 5px;
+	margin-right: 10px;
+}
