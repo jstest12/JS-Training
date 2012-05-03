@@ -81,8 +81,8 @@ function addItem3(text,value) {
 	divStar.className = 'star';
 	var divFlag = document.createElement('div');
 	divFlag.className = 'flag';
-	var flagIcon = text.substr(0,2);
-	if (text == 'EUR') flagIcon = '_EuropeanUnion';
+	var flagIcon = text.substr(0,2).toLowerCase();
+	//if (text == 'EUR') flagIcon = '_EuropeanUnion';
 	if (text == 'XAF') flagIcon = 'CF';
 	divFlag.style.cssText = 'background: url(flag-icons/flags_iso/64/'+flagIcon+'.png) no-repeat scroll 50% 50%;'
 	var divFlagName = document.createElement('div');
