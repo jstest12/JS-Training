@@ -50,7 +50,8 @@ function getExRates(option) {
 }
 
 function getJsonResp(json) {
-    var jsonP = eval('(' + json + ')'),
+    //var jsonP = eval('(' + json + ')'),
+	var jsonP = JSON.parse(json),
 		myDate = new Date(jsonP.timestamp * 1000),
 		dateStr = myDate.toLocaleDateString() + ' ' + myDate.toLocaleTimeString();
     for (var f in jsonP.rates) {
