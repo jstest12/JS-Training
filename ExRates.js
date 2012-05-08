@@ -132,7 +132,7 @@ EXRATES.converter = (function() {
             divCurrValueText.value = value;
             divCurrValueText.id = text;
             divCurrValueText.rate = value;
-            divCurrValueText.onchange = updRates;
+            divCurrValueText.onkeyup = updRates;
             divCurrValue.appendChild(divCurrValueText);
             divCenterTop.appendChild(divCurrValue);
 
