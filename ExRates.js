@@ -40,7 +40,7 @@ EXRATES.namespace = function(ns_string) {
 EXRATES.namespace('EXRATES.converter');
 
 EXRATES.converter = (function() {
-	/* helper function for XHR */
+    /* helper function for XHR */
     var getXmlHttp = function() {
             var xmlhttp;
             try {
@@ -59,7 +59,7 @@ EXRATES.converter = (function() {
 
             return xmlhttp;
         },
-		/* main func for creating list items */
+        /* main func for creating list items */
         getJsonResp = function(json) {
             var jsonP = JSON.parse(json),
                 myDate = new Date(jsonP.timestamp * 1000),
@@ -67,24 +67,24 @@ EXRATES.converter = (function() {
             for (var f in jsonP.rates) {
                 if (f == 'USD') {
                     addListItem(f, jsonP.rates[f].toFixed(3));
-					continue;
+                    continue;
                 }
                 if (f == 'BYR') {
                     addListItem(f, jsonP.rates[f].toFixed(3));
-					continue;
+                    continue;
                 }
                 if (f == 'EUR') {
                     addListItem(f, jsonP.rates[f].toFixed(3));
-					continue;
+                    continue;
                 }
                 if (f == 'RUB') {
                     addListItem(f, jsonP.rates[f].toFixed(3));
-					continue;
+                    continue;
                 }
-				//addListItem(f, jsonP.rates[f].toFixed(3));
+                //addListItem(f, jsonP.rates[f].toFixed(3));
             }
         },
-		/* helper function for making DOM elements */
+        /* helper function for making DOM elements */
         makeDiv = function(type, clName) {
             var divElem;
             if (typeof arguments[0] === 'string') {
@@ -97,7 +97,7 @@ EXRATES.converter = (function() {
             }
             return divElem;
         },
-		/* function for creating styled list element */
+        /* function for creating styled list element */
         addListItem = function(text, value) {
             var divItem = makeDiv('div','item'),
                 divLeft = makeDiv('div','left'),
@@ -146,7 +146,7 @@ EXRATES.converter = (function() {
             var container = document.getElementById('container');
             container.appendChild(divItem);
         },
-		/* ElentListener */
+        /* ElentListener */
         updRates = function() {
             var curr = document.getElementsByClassName('currValueText');
             for (var f in curr) {
@@ -156,7 +156,7 @@ EXRATES.converter = (function() {
                 curr[f].value = convertValue(this.rate, curr[f].rate, this.value);
             }
         },
-		/* function for converting two currencies through USD */
+        /* function for converting two currencies through USD */
         convertValue = function(from, to, startValue) {
             var res = (to * (1 / from) * (startValue || 1)).toFixed(3);
             return res;
